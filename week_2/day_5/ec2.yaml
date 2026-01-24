@@ -1,0 +1,13 @@
+Resources:
+  EC2Server:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-0f95dedaf2f938d49
+      InstanceType: t2.micro
+      SecurityGroupIds:
+        - sg-0c759c02c1720f83e
+      KeyName: MyWebServerKey
+      BlockDeviceMappings:
+        - DeviceName: /dev/xvda
+          Ebs:
+            VolumeSize: 15
